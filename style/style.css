@@ -1,10 +1,17 @@
+@font-face {
+    font-family: Roboto;
+    src: url('../fonts/Roboto-Regular.ttf');
+}
 
 html, body{
     background-color: #f5f7fa;
     position: relative;
+    width: 100%;
+    height: 100vw;
+    margin: 0;
+
 }
 body{
-    height: 100vw;
     background-image: url('../assets/build-illustration.png');
     background-position: bottom;
     background-repeat: no-repeat;
@@ -12,24 +19,21 @@ body{
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    width: 100%;
 }
 
-
 header{
-    position: absolute;
-    width: 1440px;
+    position: fixed;
+    width: 100%;
     height: 50px;
     left: 0px;
     top: 0px;
+    z-index: 1;
 }
 .vx-nav-top{
     background-color: #FFFFFF;    
     height: 50px;
-    left: calc(50% - 1440px/2);
-    position: absolute;
     top: 0px;
-    width: 100vw;    
+    width: 100%;    
 }
 
 .vx-logo-voxus{
@@ -41,10 +45,13 @@ header{
 }
 
 .vx-main-cadastro{
-    padding-left: 25%;
-    padding-right: 25px;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    width: 100%;
+    height: 100vw;
 }
-
 
 .vx-title{
     position: absolute;
@@ -70,8 +77,6 @@ header{
     font-size: 14px;
     line-height: 26px;
     /* or 186% */
-    display: flex;
-    align-items: flex-end;
     text-align: center;
     color: #748296;
     margin-top: 17px;
@@ -111,14 +116,14 @@ header{
     margin-bottom: 1em;
 }
 
-.vx-form-card input, .vx-form-card label {
+.vx-form-card input:not([type="button"]), .vx-form-card .vx-label-subtitle{
     -webkit-transition: all .2s;
     transition: all .2s;
     -ms-touch-action: manipulation;
     touch-action: manipulation;
 }
 
-.vx-form-card input, .vx-form-card select{
+.vx-form-card input, .vx-form-card select{ 
     color: #000000;
     border: 1px solid rgba(116, 130, 150, 0.2);
     border-radius: 3px;
@@ -128,15 +133,18 @@ header{
     line-height: 36px;
     width: 100%;
     padding-left: 22px;
-    outline: none;
 }
 
-.vx-form-card input +label, .vx-form-card  select{
+input[type="button"]{
+    padding: 0px;
+}
+
+.vx-form-card input:not([type="button"]) +.vx-label-subtitle, .vx-form-card select{
     color: rgb(45, 58, 64);
     color: rgba(45, 58, 64, 0.3);
 }
 
-.vx-form-card input:placeholder-shown+label{
+.vx-form-card input:not([type="button"]):placeholder-shown+.vx-label-subtitle{
     cursor: text;
     max-width: 100%;
     width: -webkit-max-content;
@@ -151,12 +159,18 @@ header{
     transform: translate(1rem,2.525rem) scale(1);
 }
 
-.vx-form-card input:focus+label, .vx-form-card input:not(:placeholder-shown)+label {
+.vx-form-card input:not([type="button"]):focus+.vx-label-subtitle, .vx-form-card input:not([type="button"]):not(:placeholder-shown)+.vx-label-subtitle {
     -webkit-transform: translateY(0.485rem) scale(1);
     transform: translateY(0.485rem) scale(1);
     background-color: #ffffff;
     font-size: 14px;
     margin-left: 10px;
+}
+
+.vx-label-error{
+    background-color: #F0175C;
+    border-radius: 0px 0px 4px 4px;
+    color: #ffffff;
 }
 
 .vx-form-card select{
@@ -177,10 +191,24 @@ header{
     width: 250px;
     text-align: center;
     margin-top: 1em;
-    margin-bottom: 107px;
+    margin-bottom: 1em;
+}
+
+#vx-button-experimentar:hover{
+    background-color: #23F7AB;
+}
+
+#vx-button-experimentar:disabled{
+    background: #FFFFFF;
+    border: 1px solid #14E298;
+    color: #14E298;
 }
 
 .vx-footer{
+    position: relative;   
+}
+
+.vx-footer-nav{
     border-top: 1px solid;
     border-top-color: rgb(0, 0, 0);
     border-top-color: rgba(0, 0, 0, 0.1);   
@@ -188,10 +216,137 @@ header{
     bottom: 0;
     width: 100%;
     line-height: 36px;
-    display: flex;
-    align-items: flex-end;
     letter-spacing: 0.0125em;    
     color: #748296;
 }
 
+.vx-footer-nav > *{
+    cursor: pointer;
+    display: inline-flex;
+    margin-left: 5%;
+    margin-top: 5px;    
+}
+
+.row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+}
+.row > *:first-child {
+    margin-top: 0;
+}
+.row > *:last-child {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px){
+    .row > *:last-child{  
+        margin-top: 10px !important;
+    }   
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px){
+    .row-reverse{
+        flex-flow: column-reverse;
+    }
+    .row-reverse > *:first-child{
+        margin-top: 20px;
+    }
+}
+
+[class*="col-"] {
+    width: 100%;
+    min-height: 1px;
+}
+[class*="col-"] > *:first-child {
+    margin-top: 0;
+}
+[class*="col-"] > *:last-child {
+    margin-bottom: 0;
+}
+
+@media screen and (max-width: 768px){
+    [class*="col-"]{  
+        width: 100% !important;
+    }    
+}
+
+[class*="col-"] > *:first-child {
+    margin-top: 0;
+}
+[class*="col-"] > *:last-child {
+    margin-bottom: 0;
+}
+
+@media only screen and (min-width: 1000px){
+    .col-2{
+        margin: 0;
+        width: 20%;
+    }
+    .col-3{
+        margin: 0;
+        width: 25%;
+    }
+    .col-4{
+        margin: 0;
+        width: 33.3333%;
+    }
+    .col-6{
+        margin: 0;
+        width: 50%;
+    }
+    .col-8{
+        margin: 0;
+        width: 66.6666%;
+    }
+    .col-12{
+        margin: 0;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 1000px){
+    html, body{
+        height: 100%;
+    }
+    .vx-footer-nav .vx-logo-voxus{
+        position: relative;
+        left: 0;
+    }
+    #vx-trial-message{
+        display: none;
+    }
+}
+
+#vx-contact-message{
+    font-size: 14px;
+    line-height: 36px;
+    align-items: flex-end;
+    text-align: center;
+    letter-spacing: 0.0125em;
+    color: #2D3A40;
+}
+
+.visible{
+    display: block;
+}
+
+.hidden{
+    display: none;
+}
+
+#vx-trial-message{
+    font-size: 14px;
+    line-height: 26px;
+    align-items: flex-end;
+    text-align: center;
+    color: #748296;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 70px;
+}
 /* Gabriel Tessarini */

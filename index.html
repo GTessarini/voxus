@@ -24,49 +24,80 @@
             <div class="vx-form-card">
                 <div class="vx-input-up-label">
                     <input type="text" name="nome" id="vx-nome" placeholder=" ">
-                    <label for="nome">Nome completo</label>
+                    <label class="vx-label-subtitle" for="nome">Nome completo</label>
+                    <label class="vx-label-error vx-label-error-nome" for="nome"></label>
                 </div>
                 <div class="vx-input-up-label">
                     <input type="tel" name="telefone" id="vx-telefone" placeholder=" ">
-                    <label for="telefone">Telefone</label>
+                    <label class="vx-label-subtitle" for="telefone">Telefone</label>
+                    <label class="vx-label-error vx-label-error-telefone" for="telefone"></label>
                 </div>
                 <div class="vx-input-up-label">
                     <input type="email" name="email" id="vx-email" placeholder=" ">
-                    <label for="email">Endereço de e-mail</label>
+                    <label class="vx-label-subtitle" for="email">Endereço de e-mail</label>
+                    <label class="vx-label-error vx-label-error-email" for="email"></label>
                 </div>
                 <div class="vx-input-up-label">
                     <input type="text" name="nome-empresa" id="vx-nome-empresa" placeholder=" ">
-                    <label for="nome-empresa">Nome da empresa</label>
+                    <label class="vx-label-subtitle" for="nome-empresa">Nome da empresa</label>
+                    <label class="vx-label-error vx-label-error-nome-empresa" for="nome-empresa"></label>
                 </div>        
                 <div class="vx-input-up-label">
                     <input type="url" name="url" id="vx-url" placeholder=" " pattern="www.*">
-                    <label for="url">URL do site</label>
+                    <label class="vx-label-subtitle" for="url">URL do site</label>
+                    <label class="vx-label-error vx-label-error-url" for="url"></label>
                 </div>  
                 <div class="vx-verba-mensal-container">
                     <select id="vx-verba-mensal-midia" name="vx-verba-mensal-midia" required="">
-                        <option disabled="" hidden="" selected="" value="">Verba mensal em mídia</option>
+                        <option disabled="" hidden="" selected="" value="Verba mensal em mídia">Verba mensal em mídia</option>
                         <option value="<= 5.000">&lt;= 5.000</option>
+                        <option value=">= R$5.001 e <= R$30.000">>= R$5.001 e &lt;= R$30.000</option>
+                        <option value=">= R$30.001 e <= R$100.000">>= R$30.001 e &lt;= R$100.000</option>
+                        <option value=">= R$100.001 e <= R$500.000">>= R$100.001 e &lt;= R$500.000</option>
+                        <option value=">= R$500.001">>= R$500.001</option>
+                        <option value="Não se aplica">Não se aplica</option>
                     </select>    
                 </div>
                 <input type="button" id="vx-button-experimentar" value="Experimentar gratuitamente">
-            </div>  
+                <div id="vx-contact-message" class="hidden">
+                    <p>
+                        Entraremos em contato em até 24hs úteis. 
+                     </p>
+                </div>
+                <div id="vx-trial-message" class="hidden">
+                    <p>
+                        *Para usar o trial grátis você precisa ser um e-commerce e concordar com os termos e requisitos do trial gratuito. Saiba mais em: <a href="" target="_blank" rel="noopener">Termos e requisitos de trial gratuito</a>
+                    </p>
+                </div>
+            </div>            
         </section>
         <footer class="vx-footer">
-            <nav>
-                <a href="https://www.voxus.com.br/" rel="noopener" target="_self">
-                    <img class="vx-logo-voxus" src="assets/logo-voxus-gray.png" alt="Voxus" title="Voxus">
-                </a>   
-                <span>
-                    Termos de serviço
-                </span>   
-                <span>
-                    Política de privacidade
-                </span>    
-                <span>
-                    Opções de anúncio
-                </span>         
+            <nav class="vx-footer-nav">
+                <div class="row">
+                    <div class="col-3">
+                        <a href="https://www.voxus.com.br/" rel="noopener" target="_self">
+                            <img class="vx-logo-voxus" src="assets/logo-voxus-gray.png" alt="Voxus" title="Voxus">
+                        </a>  
+                    </div>
+                    <div class="col-3">
+                        <p>
+                            Termos de serviço
+                        </p>   
+                    </div>
+                    <div class="col-3">
+                        <p>
+                            Política de privacidade
+                        </p>  
+                    </div>
+                    <div class="col-3">                             
+                        <p>
+                            Opções de anúncio
+                        </p> 
+                    </div>
+                </div>                     
             </nav>
         </footer>
+        <script src="script/main.js"></script>
     </body> 
     <!-- Gabriel Tessarini -->
 </html>

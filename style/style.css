@@ -1,0 +1,197 @@
+
+html, body{
+    background-color: #f5f7fa;
+    position: relative;
+}
+body{
+    height: 100vw;
+    background-image: url('../assets/build-illustration.png');
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: auto;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    width: 100%;
+}
+
+
+header{
+    position: absolute;
+    width: 1440px;
+    height: 50px;
+    left: 0px;
+    top: 0px;
+}
+.vx-nav-top{
+    background-color: #FFFFFF;    
+    height: 50px;
+    left: calc(50% - 1440px/2);
+    position: absolute;
+    top: 0px;
+    width: 100vw;    
+}
+
+.vx-logo-voxus{
+    height: 16px;
+    left: 250px;
+    position: absolute;    
+    top: 17px;
+    width: 79.24px;
+}
+
+.vx-main-cadastro{
+    padding-left: 25%;
+    padding-right: 25px;
+}
+
+
+.vx-title{
+    position: absolute;
+    width: 580px;
+    height: 70px;
+    top: 110px;    
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 42px;
+    /* or 131% */    
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    letter-spacing: 0.0125em;    
+    color: #2D3A40;   
+}
+
+.vx-queremos-conhecer{
+    position: absolute;
+    width: 580px;
+    height: 20px;
+    top: 197px;
+    font-size: 14px;
+    line-height: 26px;
+    /* or 186% */
+    display: flex;
+    align-items: flex-end;
+    text-align: center;
+    color: #748296;
+    margin-top: 17px;
+    margin-bottom: 73px;
+}
+
+.vx-form-card{
+    position: absolute;
+    width: 620px;
+    height: 597px;
+    top: 290px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 40px rgba(116, 130, 150, 0.2);
+    border-radius: 3px;
+    padding-top: 27px;
+    padding-bottom: 107px;
+}
+
+.vx-form-card > *{
+    margin-left: 170px;
+    margin-right: 170px;
+}
+
+.vx-form-card > #vx-button-experimentar{
+    margin-left: 185px;
+    margin-right: 185px;
+}
+
+.vx-input-up-label{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    /* -webkit-box-direction: reverse; */
+    -ms-flex-flow: column-reverse;
+    flex-flow: column-reverse;
+    margin-bottom: 1em;
+}
+
+.vx-form-card input, .vx-form-card label {
+    -webkit-transition: all .2s;
+    transition: all .2s;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+
+.vx-form-card input, .vx-form-card select{
+    color: #000000;
+    border: 1px solid rgba(116, 130, 150, 0.2);
+    border-radius: 3px;
+    box-sizing: border-box;
+    font-size: 16px;
+    height: 56px;
+    line-height: 36px;
+    width: 100%;
+    padding-left: 22px;
+    outline: none;
+}
+
+.vx-form-card input +label, .vx-form-card  select{
+    color: rgb(45, 58, 64);
+    color: rgba(45, 58, 64, 0.3);
+}
+
+.vx-form-card input:placeholder-shown+label{
+    cursor: text;
+    max-width: 100%;
+    width: -webkit-max-content;
+    width: -moz-max-content;
+    width: max-content;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-transform: translate(1rem,2.525rem) scale(1);
+    transform: translate(1rem,2.525rem) scale(1);
+}
+
+.vx-form-card input:focus+label, .vx-form-card input:not(:placeholder-shown)+label {
+    -webkit-transform: translateY(0.485rem) scale(1);
+    transform: translateY(0.485rem) scale(1);
+    background-color: #ffffff;
+    font-size: 14px;
+    margin-left: 10px;
+}
+
+.vx-form-card select{
+    font-size: 16px;
+    height: 56px;
+    padding-left: 20px;
+    outline: none;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+#vx-button-experimentar{
+    background: #14E298;
+    border-radius: 3px;
+    color: #ffffff;
+    cursor: pointer;
+    height: 42px;
+    width: 250px;
+    text-align: center;
+    margin-top: 1em;
+    margin-bottom: 107px;
+}
+
+.vx-footer{
+    border-top: 1px solid;
+    border-top-color: rgb(0, 0, 0);
+    border-top-color: rgba(0, 0, 0, 0.1);   
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    line-height: 36px;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: 0.0125em;    
+    color: #748296;
+}
+
+/* Gabriel Tessarini */

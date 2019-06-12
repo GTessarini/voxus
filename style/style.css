@@ -76,7 +76,6 @@ header{
     top: 197px;
     font-size: 14px;
     line-height: 26px;
-    /* or 186% */
     text-align: center;
     color: #748296;
     margin-top: 17px;
@@ -117,7 +116,7 @@ header{
     margin-bottom: 1em;
 }
 
-.vx-form-card input:not([type="button"]), .vx-form-card .vx-label-subtitle{
+.vx-form-card .vx-input-cadastro, .vx-form-card .vx-label-subtitle{
     -webkit-transition: all .2s;
     transition: all .2s;
     -ms-touch-action: manipulation;
@@ -140,12 +139,12 @@ input[type="button"]{
     padding: 0px;
 }
 
-.vx-form-card input:not([type="button"]) +.vx-label-subtitle, .vx-form-card select{
+.vx-form-card .vx-input-cadastro +.vx-label-subtitle, .vx-form-card select{
     color: rgb(45, 58, 64);
     color: rgba(45, 58, 64, 0.3);
 }
 
-.vx-form-card input:not([type="button"]):placeholder-shown+.vx-label-subtitle{
+.vx-form-card .vx-input-cadastro:placeholder-shown+.vx-label-subtitle{
     cursor: text;
     max-width: 100%;
     width: -webkit-max-content;
@@ -160,7 +159,7 @@ input[type="button"]{
     transform: translate(1rem,2.525rem) scale(1);
 }
 
-.vx-form-card input:not([type="button"]):focus+.vx-label-subtitle, .vx-form-card input:not([type="button"]):not(:placeholder-shown)+.vx-label-subtitle {
+.vx-form-card .vx-input-cadastro:focus+.vx-label-subtitle, .vx-form-card .vx-input-cadastro:not(:placeholder-shown)+.vx-label-subtitle {
     -webkit-transform: translateY(0.485rem) scale(1);
     transform: translateY(0.485rem) scale(1);
     background-color: #ffffff;

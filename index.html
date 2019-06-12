@@ -23,32 +23,32 @@
             </p>
             <div class="vx-form-card">
                 <div class="vx-field vx-input-up-label">
-                    <input type="text" name="nome" id="vx-nome" placeholder=" " required>
+                    <input class="vx-input-cadastro" type="text" name="nome" id="vx-nome" placeholder=" " required>
                     <label class="vx-label-subtitle" for="nome">Nome completo</label>
                     <label class="vx-label-error vx-label-error-nome" for="nome"></label>
                 </div>
                 <div class="vx-field vx-input-up-label">
-                    <input type="tel" name="telefone" id="vx-telefone" placeholder=" " required>
+                    <input class="vx-input-cadastro" type="tel" name="telefone" id="vx-telefone" placeholder=" " required>
                     <label class="vx-label-subtitle" for="telefone">Telefone</label>
                     <label class="vx-label-error vx-label-error-telefone" for="telefone"></label>
                 </div>
                 <div class="vx-field vx-input-up-label">
-                    <input type="email" name="email" id="vx-email" placeholder=" " required>
+                    <input class="vx-input-cadastro" type="email" name="email" id="vx-email" placeholder=" " required>
                     <label class="vx-label-subtitle" for="email">Endereço de e-mail</label>
                     <label class="vx-label-error vx-label-error-email" for="email"></label>
                 </div>
                 <div class="vx-field vx-input-up-label">
-                    <input type="text" name="nome-empresa" id="vx-nome-empresa" placeholder=" " required>
+                    <input class="vx-input-cadastro" type="text" name="nome-empresa" id="vx-nome-empresa" placeholder=" " required>
                     <label class="vx-label-subtitle" for="nome-empresa">Nome da empresa</label>
                     <label class="vx-label-error vx-label-error-nome-empresa" for="nome-empresa"></label>
                 </div>        
                 <div class="vx-field vx-input-up-label">
-                    <input type="url" name="url" id="vx-url" placeholder=" " pattern="www.*" required>
+                    <input class="vx-input-cadastro" type="url" name="url" id="vx-url" placeholder=" " pattern="www.*" required>
                     <label class="vx-label-subtitle" for="url">URL do site</label>
                     <label class="vx-label-error vx-label-error-url" for="url"></label>
                 </div>  
                 <div class="vx-field vx-verba-mensal-container">
-                    <select id="vx-verba-mensal-midia" name="vx-verba-mensal-midia" required="">
+                    <select id="vx-verba-mensal-midia" name="verba-mensal-midia" required>
                         <option disabled hidden selected value="Verba mensal em mídia">Verba mensal em mídia</option>
                         <option value="<= 5.000">&lt;= 5.000</option>
                         <option value=">= R$5.001 e <= R$30.000">>= R$5.001 e &lt;= R$30.000</option>
@@ -57,6 +57,7 @@
                         <option value=">= R$500.001">>= R$500.001</option>
                         <option value="Não se aplica">Não se aplica</option>
                     </select>    
+                    <label class="vx-label-error vx-label-error-verba-mensal-midia" for="verba-mensal-midia"></label>
                 </div>
                 <input type="button" id="vx-button-experimentar" value="Experimentar gratuitamente">
                 <div id="vx-contact-message" class="hidden">

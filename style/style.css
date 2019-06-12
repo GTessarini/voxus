@@ -106,6 +106,7 @@ header{
 }
 
 .vx-input-up-label{
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -171,6 +172,10 @@ input[type="button"]{
     background-color: #F0175C;
     border-radius: 0px 0px 4px 4px;
     color: #ffffff;
+    bottom: 0;
+    position: absolute;
+    margin-bottom: -20px;
+    width: 80%;
 }
 
 .vx-form-card select{
@@ -221,7 +226,6 @@ input[type="button"]{
 }
 
 .vx-footer-nav > *{
-    cursor: pointer;
     display: inline-flex;
     margin-left: 5%;
     margin-top: 5px;    

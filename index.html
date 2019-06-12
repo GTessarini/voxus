@@ -22,34 +22,34 @@
                 Queremos conhecer mais sobre sua empresa para melhorar sua experiência com a Voxus.
             </p>
             <div class="vx-form-card">
-                <div class="vx-input-up-label">
-                    <input type="text" name="nome" id="vx-nome" placeholder=" ">
+                <div class="vx-field vx-input-up-label">
+                    <input type="text" name="nome" id="vx-nome" placeholder=" " required>
                     <label class="vx-label-subtitle" for="nome">Nome completo</label>
                     <label class="vx-label-error vx-label-error-nome" for="nome"></label>
                 </div>
-                <div class="vx-input-up-label">
-                    <input type="tel" name="telefone" id="vx-telefone" placeholder=" ">
+                <div class="vx-field vx-input-up-label">
+                    <input type="tel" name="telefone" id="vx-telefone" placeholder=" " required>
                     <label class="vx-label-subtitle" for="telefone">Telefone</label>
                     <label class="vx-label-error vx-label-error-telefone" for="telefone"></label>
                 </div>
-                <div class="vx-input-up-label">
-                    <input type="email" name="email" id="vx-email" placeholder=" ">
+                <div class="vx-field vx-input-up-label">
+                    <input type="email" name="email" id="vx-email" placeholder=" " required>
                     <label class="vx-label-subtitle" for="email">Endereço de e-mail</label>
                     <label class="vx-label-error vx-label-error-email" for="email"></label>
                 </div>
-                <div class="vx-input-up-label">
-                    <input type="text" name="nome-empresa" id="vx-nome-empresa" placeholder=" ">
+                <div class="vx-field vx-input-up-label">
+                    <input type="text" name="nome-empresa" id="vx-nome-empresa" placeholder=" " required>
                     <label class="vx-label-subtitle" for="nome-empresa">Nome da empresa</label>
                     <label class="vx-label-error vx-label-error-nome-empresa" for="nome-empresa"></label>
                 </div>        
-                <div class="vx-input-up-label">
-                    <input type="url" name="url" id="vx-url" placeholder=" " pattern="www.*">
+                <div class="vx-field vx-input-up-label">
+                    <input type="url" name="url" id="vx-url" placeholder=" " pattern="www.*" required>
                     <label class="vx-label-subtitle" for="url">URL do site</label>
                     <label class="vx-label-error vx-label-error-url" for="url"></label>
                 </div>  
-                <div class="vx-verba-mensal-container">
+                <div class="vx-field vx-verba-mensal-container">
                     <select id="vx-verba-mensal-midia" name="vx-verba-mensal-midia" required="">
-                        <option disabled="" hidden="" selected="" value="Verba mensal em mídia">Verba mensal em mídia</option>
+                        <option disabled hidden selected value="Verba mensal em mídia">Verba mensal em mídia</option>
                         <option value="<= 5.000">&lt;= 5.000</option>
                         <option value=">= R$5.001 e <= R$30.000">>= R$5.001 e &lt;= R$30.000</option>
                         <option value=">= R$30.001 e <= R$100.000">>= R$30.001 e &lt;= R$100.000</option>
@@ -75,9 +75,7 @@
             <nav class="vx-footer-nav">
                 <div class="row">
                     <div class="col-3">
-                        <a href="https://www.voxus.com.br/" rel="noopener" target="_self">
-                            <img class="vx-logo-voxus" src="assets/logo-voxus-gray.png" alt="Voxus" title="Voxus">
-                        </a>  
+                        <img class="vx-logo-voxus" src="assets/logo-voxus-gray.png" alt="Voxus" title="Voxus">
                     </div>
                     <div class="col-3">
                         <p>
